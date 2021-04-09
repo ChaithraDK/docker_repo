@@ -9,7 +9,7 @@ RUN rm -rf /var/www/html/
 ADD src/ /var/www/html/
 
 #Configure apache
-RUN echo '. /etc/apache2/envars' > /root/run_apache.sh && \
+RUN echo '. /etc/apache2/envvars' > /root/run_apache.sh && \
 echo 'mkdir -p /var/run/apache2' >> /root/run_apache.sh && \
 echo 'mkdir -p /var/lock/apache2' >> /root/run_apache.sh && \
 echo '/usr/sbin/apache2 -D FOREGROUND' >> /root/run_apache.sh && \
